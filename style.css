@@ -1,0 +1,260 @@
+
+      @import 'https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Raleway:500';
+body {
+  font-family: "Raleway";
+  font-weight: normal;
+  font-size: 62.5%;
+}
+#canvas1 {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+}
+#box {
+  overflow: auto;
+  position: relative;
+}
+#box:before,
+#box:after {
+  content: " ";
+  display: table;
+}
+#box:after {
+  clear: both;
+}
+canvas {
+  background-color: transparent;
+}
+.main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+  width: 100%;
+  background-color: transparent;
+}
+.main:before,
+.main:after {
+  content: " ";
+  display: table;
+}
+.main:after {
+  clear: both;
+}
+#location {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4.4rem;
+  color: #ffffff;
+  font-family: 'Raleway';
+}
+#time {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-family: 'Droid Sans Mono';
+  margin-top: 0vh;
+  margin-bottom: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+#day-or-night {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 5.5rem;
+  color: #ffffff;
+  margin-top: 1vh;
+  margin-bottom: 0vh;
+}
+#day-or-night:before,
+#day-or-night:after {
+  content: " ";
+  display: table;
+}
+#day-or-night:after {
+  clear: both;
+}
+h2#current {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 1vh;
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-family: 'Raleway';
+}
+h2#current:before,
+h2#current:after {
+  content: " ";
+  display: table;
+}
+h2#current:after {
+  clear: both;
+}
+#circle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#circle:before,
+#circle:after {
+  content: " ";
+  display: table;
+}
+#circle:after {
+  clear: both;
+}
+#drop {
+  display: block;
+  margin-top: 0;
+  margin-bottom: -10vh;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 5.5rem;
+  color: rgba(5, 68, 255, 0.3);
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+#pctHumidity {
+  display: block;
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: normal;
+  color: #ffffff;
+  font-family: 'Droid Sans Mono';
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.45vh;
+  margin-top: 0;
+}
+#text {
+  display: block;
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-family: 'Raleway';
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .main {
+    width: 80%;
+    margin-top: 1vh;
+  }
+  #time {
+    margin-bottom: 10vh;
+  }
+  #day-to-night {
+    margin-top: 1vh;
+  }
+  h2#current {
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+  }
+  #circle {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+  }
+  #drop {
+    margin-top: 3vh;
+    margin-bottom: -3vh;
+    margin-left: -25vw;
+  }
+  #pctHumidity {
+    margin-top: -4vh;
+  }
+  #text {
+    margin-top: 0;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .main {
+    width: 80%;
+    margin-top: 1vh;
+  }
+  #day-to-night {
+    margin-top: 1vh;
+  }
+  h2#current {
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+  }
+  #circle {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+  }
+  #drop {
+    margin-top: 3vh;
+    margin-bottom: -3vh;
+    margin-left: -15vw;
+  }
+  #pctHumidity {
+    margin-top: -4vh;
+  }
+  #text {
+    margin-top: 0;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .main {
+    width: 80%;
+    margin-top: 1vh;
+  }
+  #drop {
+    margin-top: 3vh;
+    margin-bottom: -3vh;
+    margin-left: -15vw;
+  }
+  #pctHumidity {
+    margin-top: -4vh;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .main {
+    width: 80%;
+    margin-top: 20vh;
+  }
+  #circle {
+    margin-top: -5vh;
+  }
+  #drop {
+    margin-top: -1vh;
+    margin-bottom: -3vh;
+    margin-left: -15vw;
+  }
+  #pctHumidity {
+    margin-top: -4vh;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .main {
+    width: 55%;
+    margin-top: 20vh;
+  }
+  #circle {
+    margin-top: -2vh;
+  }
+  #drop {
+    margin-top: 2vh;
+    margin-bottom: -3vh;
+    margin-left: -6vw;
+  }
+  #pctHumidity {
+    margin-top: -4vh;
+  }
+}
