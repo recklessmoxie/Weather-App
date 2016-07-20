@@ -10,6 +10,7 @@ function getLocation() {
     success: function (data) {
       $local = data.city + ', ' + data.region;
       setConditions($local);
+
     },
     error: function (err) {
       console.log(err)
@@ -34,15 +35,19 @@ function setConditions(city) {
       $('#current').append(data.weather[0].description);
       $('#location').append($local);
       $('#pctHumidity').append(data.main.humidity + "%");
+
+
+      //Function calls which send temp data for display in DOM, display icon for current conditions, and create a background image//
       $displayTempF(data);
       backgroundImage(data);
       setIcon(data);
 
-      //variable/function to display date and time data//
+      //variable/function to transform date and time data for display//
       $utcSeconds = data.dt,
         $time = new Date(0),
         $time.setUTCSeconds($utcSeconds),
         $('#time').append($time);
+
     },
     error: function (err) {
       console.log(err)
@@ -179,28 +184,28 @@ var orangeRed = Trianglify({
 //renders trianglify pattern/image to canvas based on the user's current temp range//
 function backgroundImage(data) {
 
-  if ($tempF <= 30 || $tempC <= -1.11) {
+  if ($tempC <= -1.11) {
     lightPurple.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 31 && $tempF <= 40 || $tempC >= -1.12 && $tempC <= 4.44) {
+  } else if ($tempC >= -1.12 && $tempC <= 4.44) {
     midPurple.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 41 && $tempF <= 50 || $tempC >= 4.45 && $tempC <= 10) {
+  } else if ($tempC >= 4.45 && $tempC <= 10) {
     darkPurple.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 51 && $tempF <= 64 || $tempC >= 10.01 && $tempC <= 17.77) {
+  } else if ($tempC >= 10.01 && $tempC <= 17.77) {
     blues.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 65 && $tempF <= 70 || $tempC >= 17.78 && $tempC <= 21.11) {
+  } else if ($tempC >= 17.78 && $tempC <= 21.11) {
     blueGreen.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 71 && $tempF <= 84 || $tempC >= 21.12 && $tempC <= 28.88) {
+  } else if ($tempC >= 21.12 && $tempC <= 28.88) {
     greenYellow.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 85 && $tempF <= 94 || $tempC >= 28.89 && $tempC <= 34.44) {
+  } else if ($tempC >= 28.89 && $tempC <= 34.44) {
     yellowOrange.canvas(document.getElementById('canvas1'))
 
-  } else if ($tempF >= 95 || $tempC >= 34.45) {
+  } else if ($tempC >= 34.45) {
     orangeRed.canvas(document.getElementById('canvas1'))
 
   } else {
