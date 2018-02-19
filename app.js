@@ -8,9 +8,8 @@ function getLocation() {
     data: {},
     dataType: 'json',
     success: function (data) {
-      $local = data.city + ', ' + data.region;
+      $local = data.city + "," + data.regionName;
       setConditions($local);
-
     },
     error: function (err) {
       console.log(err)
